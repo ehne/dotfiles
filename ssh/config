@@ -1,0 +1,10 @@
+
+# --- Sourcetree Generated ---
+Host ehne-GitHub
+	HostName github.com
+	User ehne
+	PreferredAuthentications publickey
+	IdentityFile /Users/darcylf/.ssh/ehne-GitHub
+	UseKeychain yes
+	AddKeysToAgent yes
+# ----------------------------
