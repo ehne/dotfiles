@@ -12,5 +12,17 @@
         path: vim/vimrc
         create: true
     ~/.zshrc: zshrc
+    ~/z.sh: z.sh
 
+- create:
+    - ~/dev
 
+- pip:
+    file: requirements.txt
+    binary: /usr/local/bin/pip3
+    user: true    # Like --user
+    stdout: false # Print the execution stdout
+    stderr: true  # Print the execution stderr
+
+- shell:
+    - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
