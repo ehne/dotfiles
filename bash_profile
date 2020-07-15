@@ -33,6 +33,8 @@ alias gp='git push'
 alias grm='git rm $(git ls-files --deleted)'
 alias gl='git log --oneline'
 alias gch='git checkout' # recuires you type a id to checkout
+alias gac="ga && gc" # requires you to type a commit message
+alias grh="git reset --hard" #requries you to type an id to revert to
 
 ### Prompt Colors
 # Modified version of @gf3’s Sexy Bash Prompt
