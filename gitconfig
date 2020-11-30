@@ -22,21 +22,16 @@
 	added = yellow
 	changed = green
 	untracked = cyan
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+
 [user]
 	name = Darcy LF
 	email = ehnevault@gmail.com
 [commit]
 	template = /Users/darcylf/.stCommitMsg
-[credential]
-	helper = osxkeychain
-
-# This next lines include Netlify's Git Credential Helper configuration in your Git configuration.
 [include]
   path = /Users/darcylf/.netlify/helper/git-config
 [filter "lfs"]
@@ -44,3 +39,11 @@
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[init]
+	defaultBranch = main

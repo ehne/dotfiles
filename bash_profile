@@ -3,6 +3,7 @@ alias nr="npm run"
 alias ds="cd ~/dev/school/data-science"
 alias nb="cd ~/dev/notebooks && jupyter notebook"
 alias vce="cd ~/dev/school/vce"
+alias redis-start="redis-server /usr/local/etc/redis.conf"
 
 # Color LS
 colorflag="-G"
@@ -163,6 +164,7 @@ elif type compctl &>/dev/null; then
   compctl -K _npm_completion npm
 fi
 ###-end-npm-completion-###
+
 
 ##
 # Your previous /Users/darcylf/.bash_profile file was backed up as /Users/darcylf/.bash_profile.macports-saved_2019-02-23_at_08:49:27
